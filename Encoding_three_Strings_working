@@ -1,0 +1,96 @@
+
+
+		
+		String all[] = new String[]{input1,input2,input3};
+		
+		
+		
+		StringBuilder final1 = new StringBuilder();
+		
+		StringBuilder Front =new StringBuilder();
+		StringBuilder Mid = new StringBuilder();
+		StringBuilder End = new StringBuilder();
+							
+				for(int i = 0 ; i < all.length;i++)
+				{
+					String First="";
+					String Second="";
+					String Third="";
+					
+						int temp_len = all[i].length();
+						
+						if(temp_len%3 == 0)
+						{
+							
+							
+							
+							
+							
+							int len3 = all[i].length()/3;
+							
+							
+							 First = all[i].substring(0, len3);
+							 Second  = all[i].substring(len3, len3+len3);
+							 Third = all[i].substring( len3+len3, all[i].length() );
+							
+							
+							
+						}
+						else if(temp_len%3 == 1)
+						{
+							
+							
+							
+							int len1  = all[i].length()/3;
+							 First = all[i].substring(0, len1);
+							 Second = all[i].substring(len1, len1+(len1+1));
+							 Third = all[i].substring(len1+(len1+1), all[i].length());
+							
+							
+							
+						}
+						else if(temp_len%3 == 2)
+						{
+							
+							
+							int len2 = all[i].length()/3;
+							
+							 First = all[i].substring(0, len2+1 );
+							 Second = all[i].substring(len2+1, len2+len2+1);
+							 Third  = all[i].substring(len2+len2+1,all[i].length());
+							
+							
+							
+							
+						}
+					
+				
+						
+								Front.append(First);
+								Mid.append(Second);
+								End.append(Third);
+						
+				}
+				
+				
+			
+		
+						char ch[] = End.toString().toCharArray();
+						
+						
+						for(int i = 0 ; i < ch.length;i++)
+						{
+							
+								if( Character.isLowerCase( ch[i]))
+									ch[i] = Character.toUpperCase(ch[i]);
+								else if(Character.isUpperCase(ch[i]))
+									ch[i] = Character.toLowerCase(ch[i]);
+							
+						}
+				
+							
+				
+					UserMainCode.Result	obj = new Result(Front.toString(), Mid.toString(), new String(ch)); 				
+						
+					
+return obj;
