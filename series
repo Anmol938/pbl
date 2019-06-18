@@ -1,0 +1,41 @@
+package aloha1;
+
+import java.util.Arrays;
+
+public class Series {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int a = 1 , b = 3, c = 6, N = 17;
+		
+		
+		int array[]   = new int[1000];
+		
+		array[0] = a;
+		array[1] = b;
+		array[2] = c;
+		
+		
+		int sum = 0 ;
+		for(int i = 3;i <=N;i++)
+		{
+			
+			sum =  array[i-1] + (array[i-2] - array[i-3]);
+			
+			array[i] = sum;
+			
+		}
+		
+		
+		
+				System.out.println(Arrays.toString(array));
+				
+		System.out.println(array[N-1]);
+		
+		
+		
+		
+	}
+
+}
