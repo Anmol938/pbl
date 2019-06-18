@@ -1,0 +1,67 @@
+
+public class Alt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	int	N = 6;
+	
+	int opt =2;
+	
+	int flag = 0;
+	int result = N;
+	
+	
+	if(opt == 1)
+		for(int i = N-1; i>=1 ;i--)
+			{	
+		
+				if(flag == 0)
+					{
+					result = result - i;
+					flag=1;
+			
+			
+					}
+				else
+				{
+					result = result + i;
+					flag =0;
+			
+				}
+		
+				//System.out.println(result);
+		
+			}
+	if(opt == 2)
+		for(int i = N-1; i>=1 ;i--)
+		{	
+	
+			if(flag == 0)
+				{
+				result = result + i;
+				flag=1;
+		
+		
+				}
+			else
+			{
+				result = result - i;
+				flag =0;
+		
+			}
+	
+			System.out.println(result);
+	
+		}
+	
+	
+	
+	
+	
+	
+		
+		
+	}
+
+}
