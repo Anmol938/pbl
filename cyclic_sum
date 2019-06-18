@@ -1,0 +1,42 @@
+package Aloha;
+
+public class Cyclic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+			int num = 582109;
+			
+			
+				String str = Integer.toString(num);
+				int sum = 0 ;
+				System.out.println(str);
+				for(int i = 0 ; i < str.length();i++)
+				{
+					sum += Character.getNumericValue( str.charAt(i) ); 
+					
+					System.out.print(str.charAt(i)+ " " );
+						for(int j = i+1; j < str.length();j++ )
+						{
+							
+								sum += Character.getNumericValue( str.charAt(j));
+								
+							System.out.print(str.charAt(j) + " ");
+							
+						}
+						
+						System.out.println(sum);
+					
+				}
+				
+				
+				System.out.println(sum);
+			
+			
+		
+		
+	}
+
+}
