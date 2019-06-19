@@ -1,0 +1,84 @@
+package pb;
+
+import java.util.Arrays;
+
+public class O_re {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+			String input1 = "Rajivzabyx";  //first_name
+			String input2 = "Rajivzabxy";	 // last_name	
+			int input3 = 560037;		 // PIN	
+			int input4 = 6;		// number N
+			
+			String Smaller_Name ="";
+			String Longer_Name ="";
+			
+			
+			if(input2.length() > input1.length() )
+			{	Longer_Name = input2;
+				Smaller_Name = input1;
+			}
+			else 
+				{Smaller_Name = input2;
+				 Longer_Name = input1;	
+				}
+		
+			
+			if(input1.length() == input2.length())
+			{
+				
+				int temp = input1.compareToIgnoreCase(input2);
+				
+				if(temp > 0)
+				{
+					Longer_Name = input1;
+					Smaller_Name = input2;
+					
+				}
+				else
+				{
+					Smaller_Name = input1;
+					Longer_Name = input2;
+				}
+				
+			}
+				
+				
+			
+			
+			StringBuilder usrId = new StringBuilder();
+			
+			usrId.append(Smaller_Name.charAt(Smaller_Name.length()-1));
+			usrId.append(Longer_Name);
+			
+			
+			
+		
+			
+			usrId.append(Integer.toString(input3).charAt(input4-1));
+			
+			
+	
+			
+			usrId.append(new StringBuilder(Integer.toString( input3 )).reverse().charAt(input4-1));
+			//System.out.println(usrId);
+		char ch[] = usrId.toString().toCharArray();
+
+			for(int i = 0 ; i < usrId.toString().length();i++)
+			{
+				
+					if(  Character.isUpperCase( ch[i]) )
+						ch[i] = Character.toLowerCase(ch[i]);
+					else if(  Character.isLowerCase(ch[i] ))
+						ch[i] = Character.toUpperCase(ch[i]);
+									
+			}
+			
+			
+			System.out.println(new String(ch));
+		
+	}
+
+}
