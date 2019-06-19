@@ -1,0 +1,79 @@
+import java.util.Arrays;
+
+public class Sta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int input1 = 12;
+		int input2 = 1313;
+		int input3 = 122;
+		int input4 = 678;
+		int input5 = 898;
+		int sum_stable = 0;
+		int sum_unstable = 0;
+		
+		int array[] = new int[]{input1,input2,input3,input4,input5};
+		
+		//System.out.println(Arrays.toString(array));
+		
+		
+		for(int i = 0 ; i < array.length;i++)
+		{
+			int count[] = new int[10];
+			
+				int temp = array[i];
+				
+				while(temp>0)
+				{
+					
+					int val = temp%10;
+					
+					temp /=10;
+					
+					count[val]++;
+				}
+				
+				
+				int check=0;
+				for(int j = 0 ; j  < count.length;j++)
+				{
+					
+					if(count[j] != 0)
+					{
+							check = count[j];	
+							break;
+					}
+				}
+				
+				int flag = 0;
+				for(int j = 0 ; j < count.length;j++)
+				{
+					
+					if(count[j] != check && count[j] != 0)
+						{//System.out.println("hello");
+						flag = 1;
+						break;
+						}
+					
+				}
+				
+				if( flag == 1)
+					sum_unstable += array[i];
+				else
+					sum_stable += array[i];
+				
+				
+				
+				//System.out.println(sum_stable + "   <---->   " + sum_unstable);
+			
+		}
+		
+		
+		System.out.println(sum_stable - sum_unstable);
+		
+		
+		
+	}
+
+}
