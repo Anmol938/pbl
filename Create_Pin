@@ -1,0 +1,86 @@
+package pb;
+
+import java.util.Arrays;
+
+public class Cp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		int input1 = 123;
+		int input2 = 582;
+		int input3 = 175;
+		
+		int ones[] = new int[3];
+		int tens[] = new int[3];
+		int hund[] = new int[3];
+		int thou = 0;
+		int inputs[] = new int[] {input1,input2,input3};
+		
+		StringBuilder str = new StringBuilder();
+		
+		
+		
+			for(int i = 0 ; i < inputs.length;i++)
+			{
+				int temp = inputs[i]; 
+				
+					
+					ones[i] = temp%10;
+					
+					temp /= 10;
+					
+					tens[i] = temp%10;
+					
+					temp /= 10;
+					
+					hund[i] = temp%10;
+					
+						
+					
+				
+			}
+		//System.out.println(Arrays.toString(ones) + " " +Arrays.toString(tens) + " " + Arrays.toString(hund) );
+	
+					int min_O=1000;
+					int min_T = 1000;
+					int min_H = 1000;
+					
+					for(int i = 0 ;i < inputs.length;i++)
+					{
+						
+						if(min_O  > ones[i])
+							min_O = ones[i];
+						
+						if(min_T > tens[i])
+							min_T = tens[i];
+						
+						if(min_H > hund[i])
+							min_H = hund[i];
+						
+						// ------->>>>
+						if(thou  < ones[i])
+							thou = ones[i];
+						
+						if(thou < tens[i])
+							thou = tens[i];
+						
+						if(thou < hund[i])
+							thou = hund[i];
+						
+					}
+		
+		//System.out.println(min_O  + " " + min_T + " " + min_H + " " + thou);
+		
+			str.append(Integer.toString(min_O));
+			str.append(Integer.toString(min_T));
+			str.append(Integer.toString(min_H));
+			str.append(Integer.toString(thou));
+			
+			System.out.println(Integer.parseInt( str.reverse().toString() ));
+		
+	}
+
+}
