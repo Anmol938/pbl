@@ -1,0 +1,101 @@
+import java.util.Arrays;
+
+public class Semaphore {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+				
+		String num = "9880127431";
+				
+				
+				
+				char ch []  = num.toCharArray();
+		
+					
+					int even_p = 0;
+					int even = 0;
+					int sum_E=0;
+					int sum_O = 0;
+					int first = Character.getNumericValue( ch[0] );
+					if( first%2 == 0)
+					{even_p = 1;
+					 sum_E = first;	
+					}
+					else if(  first%2 != 0)
+					{even_p = 0;
+					sum_O = first;					
+					}
+				
+				
+				int array[]= new int[20];
+				StringBuilder st = new StringBuilder();
+
+				
+					
+				
+				
+				
+				for(int i = 1; i < ch.length ; i++ )
+				{
+					int temp =  Character.getNumericValue( ch[i] );
+					
+			
+					
+						
+					if( (sum_O + temp) % 2 != 0 && i < ch.length-1  )
+					{	
+						sum_O = sum_O + temp;
+						first = ch[i];
+						System.out.println("first if");
+			
+					
+					}
+					else
+					{
+						
+						
+						
+						array[i] = sum_O+temp;
+						sum_O = 0;
+						first = ch[i];
+						
+					}
+						
+					
+					
+					
+					
+					
+				}
+				
+				
+				for(int i = 0; i < array.length;i++)
+				{
+					
+					if(array[i] != 0)
+					{
+						st.append(Integer.toString(array[i] ));
+						
+					}
+					
+					
+					
+					
+				}
+				
+				System.out.println(Arrays.toString(array));
+				System.out.println(st);
+				
+					
+				
+		
+		
+		
+		
+		
+		
+	}
+
+}
