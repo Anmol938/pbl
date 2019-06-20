@@ -1,0 +1,45 @@
+import java.util.Arrays;
+
+public class Hill {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		int input1 = 5;// total levels
+		int input2 = 10;// weight of head level
+		int input3 = 2;// subsequent increase
+		int sum = input2;
+		int array[] = new int[6];
+		array[1] = input2;
+		
+		for(int i = 2; i<=input1;i++)
+		{
+			input2 = input2 + input3;
+			int temp  = 0;
+			temp = input2;
+			temp *= i ;
+			
+			array[i] = temp;
+			
+			
+			sum += array[i];
+			
+				
+			
+			
+		}
+		
+		
+		System.out.println(Arrays.toString(array) + " " + sum);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
