@@ -1,0 +1,25 @@
+
+public class String_all {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		String str = "aeiou_RvnClw";
+		
+		
+		System.out.println(new StringBuilder(str).reverse());
+		
+		
+		System.out.println((str));
+		
+		
+		System.out.println(str.replaceAll("[a,e,i,o,u]","Z"));
+		
+		
+		
+		System.out.println(str.concat(" ----------- " + str.replaceAll("[a,e,i,o,u]","Z")));
+		
+	}
+
+}
