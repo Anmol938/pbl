@@ -1,0 +1,92 @@
+import java.util.Arrays;
+
+public class Ass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+				
+				int arr[] = new int[] {47,-65,51,17,29,32};
+				int arr1[] = new int[] { 16,41,20, 13, 11, -49 };
+				
+				int final123[] = new int[100];
+				
+						String K_s = Integer.toString(arr[0]);
+						//System.out.println(K_s);
+						
+						
+						int key = Character.getNumericValue( K_s.charAt( K_s.length()-1) ); 
+						int address = Integer.parseInt( K_s.substring(0, K_s.length()-1) );
+						
+					System.out.println(key);
+					
+					final123[0] = key;
+					System.out.println(address);
+		int temp = arr[address];
+					int i = 1 ;
+					while( temp >= 0   )
+					{	
+						
+						
+						String temp_S = Integer.toString(temp);
+						
+						key = Character.getNumericValue(  temp_S.charAt(temp_S.length()-1) );
+						address = Integer.parseInt( temp_S.substring(0, temp_S.length()-1) );
+						
+						final123[i] = key;
+						
+						temp = arr[address]; 
+									
+						i++;
+						
+						
+						
+					}
+							
+					
+					String temp_S = Integer.toString(temp);
+					
+					key = Character.getNumericValue(  temp_S.charAt(temp_S.length()-1) );
+					address = Character.getNumericValue( temp_S.charAt(0));
+					
+					final123[i] = key;
+					
+					
+
+					System.out.println(Arrays.toString(final123));
+					
+					
+					
+					
+					 int flag = 1;
+					 
+					 
+					 int sum = final123[0];
+					 for(int j = 1 ; j <=i; j++)
+					 {
+						 
+						 if( flag == 0)
+						 {	 sum = sum + final123[j];
+						 	flag = 1;
+						 }
+						 else
+						 {
+							 sum = sum -  final123[j];
+							 flag = 0;
+							 
+							 
+						 }
+						 
+						 
+					 }
+					
+					
+					
+					 System.out.println(sum);
+					
+					
+					
+					
+	}
+
+}
