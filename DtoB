@@ -1,0 +1,65 @@
+import java.util.Arrays;
+import java.util.Collections;
+
+public class DtoB {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		
+		
+				
+				int n =  20;
+				
+				
+				System.out.println(Integer.toBinaryString(n));
+				System.out.println(Integer.toHexString(n));
+				System.out.println(Integer.toOctalString(n)+"\n\n");
+				System.out.println(Integer.MAX_VALUE);
+				System.out.println(Double.MAX_VALUE);
+				System.out.println(Float.MAX_VALUE);
+				System.out.println(Character.MAX_VALUE);
+				//System.out.println(Boolean.MAX_VALUE);
+				System.out.println(Integer.MAX_VALUE);
+				System.out.println(Integer.MAX_VALUE);
+				System.out.println(Integer.MAX_VALUE);
+				
+				
+				
+				
+				
+				
+		
+				//System.out.println( Integer.highestOneBit(n));
+				
+				
+				System.out.println(Integer.parseInt("101", 2));
+				
+				
+				int arr[] = new int[] {9,8,7,6,5,4,3,2,1,10,11,12,13,14,15,16,17,18,19};
+				
+				
+				
+				Arrays.sort(arr);
+				//System.out.println(Arrays.toString(  arr ));
+				
+				StringBuilder as = new StringBuilder( Arrays.toString( arr ));
+				
+				//System.out.println( new StringBuilder(Arrays.toString(arr)));
+				
+				System.out.println(as);
+
+
+
+				
+				
+				
+		
+		
+		
+		
+		
+		
+	}
+
+}
