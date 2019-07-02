@@ -1,0 +1,64 @@
+import java.util.Arrays;
+
+public class Srting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int arr1[] = new int[] {100,90,80,70,60,60,90,80,100,110};
+		int arr2[] = new int[] {50,40,30,20,10};
+		
+		
+		
+		
+		
+		Arrays.sort(arr1);
+		
+		int max_1 = 110;
+		
+		System.out.println(Arrays.toString( arr1) + "  " +  Arrays.binarySearch(arr1, 70));
+		
+		int count[] = new int[max_1 + 1];
+		
+		
+		for(int i= 0 ; i < arr1.length; i++)
+		{
+			
+			count[arr1[i]]++;
+			
+		}
+		
+		int j= 0 ;
+	int esult[] = new int[arr1.length];
+		for(int i = 0 ;i  < count.length;i++)
+		{
+			
+			if(count[i] != 0)
+			{
+				
+				esult[j] = i;
+				
+				j++;
+			}
+				
+		
+		}
+		
+		System.out.println("  -------------"+j);
+	int final123[] = new int[j];
+	
+	for(int i = 0; i < j;i++)
+	{
+		
+		final123[i] = esult[i];
+		
+	}
+	
+	System.out.println(Arrays.toString( final123));
+		
+		
+		
+	}
+
+}
